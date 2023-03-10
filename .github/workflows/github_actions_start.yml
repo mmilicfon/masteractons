@@ -9,3 +9,9 @@ jobs:
       - run: echo "Branch is ${{ github.ref }} on repository ${{ github.repository }} "
       - name: Chekout repository code
         uses: actions/checkout@v3
+      - run: echo "The ${{ github.repository }} has been cloned"
+      - name: List files in the repository
+        run: |
+          ls -l ${{ github.workspace }}
+      - run: echo "Job status ${{ job.status }}"
+
