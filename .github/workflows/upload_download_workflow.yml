@@ -9,7 +9,7 @@ jobs:
         run: |
           expr 5 + 5 -> output.txt
       - name: Upload artifact
-        uses: action/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: output-log-file
           path: output.txt
